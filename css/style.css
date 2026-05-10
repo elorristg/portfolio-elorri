@@ -149,6 +149,15 @@ h2 {
   margin-left: 300px;
 }
 
+.container-box a.box {
+  text-decoration: none; /* Enlève le soulignage */
+  color: inherit; /* Garde la couleur de texte initiale */
+  display: flex; /* On remet le flex pour que le texte soit centré comme avant */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 .box {
   background-color: #eaddd0;
   border: 3px solid black;

@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  background-image: url(../img/fond-campagne.jpg);
+  background-size: cover;
+  background-position: top center;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  min-height: 100vh;
+  padding: 0 5%;
+}
+.container .bloc-texte {
+  flex: 1;
+  max-width: 650px;
+  color: #ffffff;
+}
+.container .bloc-texte h1 {
+  margin-bottom: 2rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container .bloc-texte h1 .texte-fin {
+  font-size: 4rem;
+  font-weight: normal;
+}
+.container .bloc-texte h1 .texte-gras {
+  font-size: 4rem;
+  font-weight: bold;
+}
+.container .bloc-texte p {
+  font-size: 1.6rem;
+  margin-bottom: 4rem;
+  line-height: 1.3;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container .bloc-texte .btn {
+  background-color: #6a482a;
+  color: #ffffff;
+  padding: 1.5rem 3rem;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+.container .bloc-texte .btn:hover {
+  background-color: #a5764a;
+}
+.container .bloc-image {
+  flex: 1;
+  max-width: 350px;
+  display: flex;
+  justify-content: flex-end;
+}
+.container .bloc-image img {
+  max-width: 250px;
+  height: auto;
+}
+
+@media (max-width: 575px) {
+  .container {
+    flex-direction: column-reverse;
+    padding: 5rem 5%;
+    gap: 30px;
+  }
+  .container .bloc-texte {
+    text-align: center;
+  }
+  .container .bloc-texte h1 .texte-fin,
+  .container .bloc-texte h1 .texte-gras {
+    font-size: 2.8rem;
+  }
+  .container .bloc-texte p {
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
+  }
+  .container .bloc-texte .btn {
+    display: block;
+    width: 100%;
+    background-color: #f0f0f0;
+    color: #6a482a;
+  }
+  .container .bloc-texte .btn:hover {
+    background-color: #807676;
+  }
+  .container .bloc-image {
+    justify-content: center;
+    max-width: 100%;
+  }
+  .container .bloc-image img {
+    max-width: 180px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

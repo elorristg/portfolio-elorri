@@ -1,0 +1,69 @@
+@font-face {
+  font-family: "Shadows Into Light Two";
+  src: url("../fonts/Shadows_Into_Light_Two/ShadowsIntoLightTwo-Regular.ttf")
+    format("truetype");
+}
+
+html {
+  font-size: 62.5%;
+}
+
+header {
+  font-family: "Shadows Into Light Two";
+  font-size: 2.4rem;
+  padding: 2rem 2rem;
+  border-bottom: 2px solid black;
+}
+
+header .elements {
+  font-weight: bold;
+}
+
+h2 {
+  font-family: "Shadows Into Light Two";
+  font-size: 2rem;
+}
+
+.elements {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.elements ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+main .elements {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+.element {
+  background-color: rgb(109, 150, 193);
+  border-radius: 2rem;
+  padding: 1rem 1rem;
+}
+.element h2 {
+  padding: 0rem 5rem;
+  text-decoration: underline;
+  flex-basis: 100%;
+  margin-bottom: 10px;
+}
+.element img {
+  width: fit-content;
+  height: auto;
+  border-radius: 10px;
+  flex-basis: 100%;
+}
+
+@media screen and (max-width: 576px) {
+  .element {
+    flex-basis: 48%;
+    margin-bottom: 0;
+  }
+}

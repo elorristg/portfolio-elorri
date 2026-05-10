@@ -1,0 +1,131 @@
+@use "variables" as *;
+@use "mixins" as *;
+/*a mettre de preference dans un fichier sass "reset" : *  html et body*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $police-texte;
+}
+
+.container {
+  background-image: url(../img/fond-campagne.jpg);
+  background-size: cover;
+  background-position: top center;
+
+  @include flex-center(row-reverse);
+
+  gap: 40px;
+  min-height: 100vh;
+  padding: 0 5%;
+
+  .bloc-texte {
+    flex: 1;
+    max-width: 650px;
+    color: $couleur-texte;
+
+    h1 {
+      margin-bottom: 2rem;
+      line-height: 1.1;
+      text-transform: uppercase;
+      font-family: $police-texte;
+
+      .texte-fin {
+        font-size: 4rem;
+        font-weight: normal;
+      }
+
+      .texte-gras {
+        font-size: 4rem;
+        font-weight: bold;
+      }
+    }
+
+    p {
+      font-size: $taille-texte;
+      margin-bottom: 4rem;
+      line-height: 1.3;
+      font-family: $police-texte;
+    }
+
+    .btn {
+      background-color: $couleur-bouton;
+      color: $couleur-texte;
+      padding: 1.5rem 3rem;
+      text-decoration: none;
+      font-size: $taille-texte;
+      font-weight: bold;
+      font-family: $police-texte;
+      text-transform: uppercase;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: $couleur-bouton-survol;
+      }
+    }
+  }
+
+  .bloc-image {
+    flex: 1;
+    max-width: 350px;
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+      max-width: 250px;
+      height: auto;
+    }
+  }
+}
+@media (max-width: 575px) {
+  .container {
+    flex-direction: column-reverse;
+    padding: 5rem 5%;
+    gap: 30px;
+
+    .bloc-texte {
+      text-align: center;
+
+      h1 {
+        .texte-fin,
+        .texte-gras {
+          font-size: 2.8rem;
+        }
+      }
+
+      p {
+        font-size: 1.4rem;
+        margin-bottom: 3rem;
+      }
+
+      .btn {
+        display: block;
+        width: 100%;
+        background-color: #f0f0f0;
+        color: $couleur-bouton;
+
+        &:hover {
+          background-color: #807676;
+        }
+      }
+    }
+
+    .bloc-image {
+      justify-content: center;
+      max-width: 100%;
+
+      img {
+        max-width: 180px;
+      }
+    }
+  }
+}
+
+/*creer un fichier supp dans dossier sass "_reset.scss" pour mettre des petites infos supp comme box sizing: border-box, html 62.5%, ou la declaration des polices a utiliser dans le body et la taille ainsi que img taille*/

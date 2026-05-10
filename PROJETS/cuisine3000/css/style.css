@@ -1,0 +1,102 @@
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/Manrope/Manrope-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "patrick hand sc";
+  src: url("../fonts/Patrick_Hand_SC/PatrickHandSC-Regular.ttf")
+    format("truetype");
+}
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  font-family: "Manrope";
+  font-size: 2.4rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: blue;
+  justify-content: left;
+}
+
+nav ul {
+  list-style: none;
+}
+
+.titleh1 {
+  font-family: "manrope";
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-family: "Manrope";
+  font-size: 2.4rem;
+  text-decoration: underline;
+}
+
+h3 {
+  font-family: "patrick hand sc";
+  font-size: 2.3rem;
+}
+
+p {
+  font-family: "patrick hand sc";
+  font-size: 2.1rem;
+}
+
+header .container {
+  text-align: center;
+
+  margin: 2rem;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 25px 40px;
+}
+
+.titleh1 {
+  text-align: center;
+}
+
+.element img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.element {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+
+.element {
+  flex-basis: 100%;
+  margin-bottom: 25px;
+}
+
+@media screen and (min-width: 576px) {
+  .element {
+    flex-basis: 48%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .element {
+    flex-basis: 23%;
+  }
+}

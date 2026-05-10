@@ -1,0 +1,324 @@
+@font-face {
+  font-family: "bebas";
+  src: url("../fonts/BEBAS___-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+header {
+  font-family: "bebas", sans-serif;
+  background-color: red;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 5%;
+  color: white;
+  margin-top: 0;
+}
+
+.logo {
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+}
+
+.menu li {
+  margin-left: 15px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.background {
+  background-image: url(../img/texture.jpeg);
+  background-size: cover;
+  background-position: center;
+  padding: 100px 5%;
+  text-align: center;
+}
+
+.background h1 {
+  font-size: 40px;
+  border-top: 15px solid white;
+  border-right: 15px solid white;
+  border-bottom: 15px solid white;
+  border-left: 15px solid white;
+  width: 55%;
+  background-color: white;
+  color: red;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 0;
+}
+
+.background p {
+  font-size: 20px;
+  border-top: 15px solid red;
+  border-right: 15px solid red;
+  border-bottom: 15px solid red;
+  border-left: 15px solid red;
+  width: 50%;
+  background-color: red;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 0;
+}
+
+.personnages {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.personnages h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 32px;
+  color: red;
+  font-family: "bebas", sans-serif;
+  margin-bottom: 30px;
+}
+
+.personnages figure {
+  width: 10%;
+  min-width: 200px;
+  text-align: center;
+  margin: 15px;
+}
+
+.personnages img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.personnages figcaption {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.personnages p {
+  font-size: 13px;
+  line-height: 1.4;
+  margin-bottom: 15px;
+  height: 75px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.personnages input {
+  background-color: white;
+  color: red;
+  border: 2px solid red;
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.video-bande-annonce {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 50px 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.video-bande-annonce h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 32px;
+  color: white;
+  font-family: "bebas", sans-serif;
+  margin-bottom: 40px;
+}
+
+.video-bande-annonce .conteneur-flex-trailers {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 30px;
+}
+
+.video-bande-annonce video {
+  width: 300px;
+  margin-right: 20px;
+}
+
+.video-fond-unique {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(40%);
+}
+.video-bande-annonce figure {
+  display: flex;
+  align-items: flex-start;
+  width: 48%;
+  margin: 0;
+}
+
+.à-venir {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  overflow: hidden;
+}
+
+.à-venir h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 32px;
+  color: white;
+  font-family: "bebas", sans-serif;
+  margin-bottom: 40px;
+}
+
+.à-venir table {
+  background-color: white;
+  margin: auto;
+  width: 45%;
+  border: 5px solid red;
+  border-collapse: collapse;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.à-venir th {
+  padding: 15px;
+  font-weight: bold;
+  font-size: 18px;
+  border: 2px solid red;
+  color: black;
+  border-left: none;
+  border-right: none;
+}
+
+.à-venir td {
+  padding: 12px;
+  font-size: 16px;
+  color: black;
+  border: none;
+  text-align: center;
+}
+
+.contenu-tableau {
+  position: static;
+  z-index: 1;
+  text-align: center;
+}
+
+.contact-map-conteneur {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 5%;
+}
+
+.contact-section {
+  width: 45%;
+}
+
+.map-section {
+  width: 45%;
+}
+
+.contact-section h2 {
+  color: red;
+  font-family: "bebas", sans-serif;
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.map-section h2 {
+  color: red;
+  font-family: "bebas", sans-serif;
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-top: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+form input[type="text"] {
+  padding: 12px;
+  border: 2px solid grey;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+form input[type="email"] {
+  padding: 12px;
+  border: 2px solid grey;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+form select {
+  padding: 12px;
+  border: 2px solid grey;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+form textarea {
+  padding: 12px;
+  border: 2px solid grey;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.bouton-envoyer {
+  margin-top: 20px;
+  background-color: transparent;
+  color: red;
+  border: 2px solid red;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.bouton-envoyer:hover {
+  background-color: red;
+  color: white;
+}
+
+footer {
+  background-color: red;
+  color: white;
+  padding: 15px 8%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.section-globale-cinema {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}

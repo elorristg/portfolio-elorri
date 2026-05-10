@@ -1,0 +1,617 @@
+@font-face {
+  font-family: "kreon";
+  src: url("../fonts/Kreon/Kreon-VariableFont_wght.ttf") format("truetype");
+}
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "kreon";
+}
+
+h2 {
+  font-size: 2rem;
+  font-family: "kreon";
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-family: "kreon";
+}
+
+header {
+  font-family: "kreon";
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: white;
+  background-color: #212d39;
+  padding: 15px 0;
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.banner {
+  background-image: url("../img/pexels-photo-132694.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 9rem;
+  font-family: "kreon";
+  text-transform: uppercase;
+  background-color: #3e2c0a;
+  color: white;
+  padding: 0 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.banner p {
+  font-family: "kreon";
+  font-size: 3.2rem;
+  font-weight: bold;
+  background-color: white;
+  color: #3e2c0a;
+  padding: 0 10px;
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+
+.elements-cakes3000 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 180px;
+  margin-right: 150px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  gap: 25px;
+}
+
+nav a {
+  font-size: 1.3rem;
+  color: white;
+  text-decoration: none;
+}
+
+/*fin header*/
+
+/*debut Qui sommes nous ?*/
+
+.elements-qui-sommes-nous {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 250px;
+  margin-right: 150px;
+  padding-bottom: 50px;
+}
+#qui-sommes-nous h2 {
+  color: #333;
+  font-family: "kreon";
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.intro p {
+  color: #333;
+  font-family: "kreon";
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.intro p::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background-color: #333;
+  margin: 20px auto 50px auto;
+}
+
+main .element {
+  color: #333;
+  font-family: "kreon";
+  font-size: 1.2rem;
+  text-align: center;
+  flex: 1;
+}
+
+main .element img {
+  height: 50px;
+  margin-bottom: -10px;
+}
+
+/*debut "partie en quelques chiffres"*/
+#fond-chiffres {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.125), rgba(0, 0, 0, 0.4)),
+    url("../img/kitchen-cake-backe-backing.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+}
+
+#quelques-chiffres {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.icons {
+  text-align: center;
+  color: white;
+}
+
+.icons img {
+  height: 60px;
+  filter: brightness(0) invert(1);
+}
+
+.icons .chiffre {
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: "kreon";
+}
+
+.icons p {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+/*debut partie "notre carte"*/
+
+.choix-notre-carte {
+  font-family: "kreon";
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.choix-notre-carte p::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background-color: #333;
+  margin: 20px auto 50px auto;
+}
+
+.notre-carte {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.choix-carte p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.choix-carte h3 {
+  color: #3e2c0a;
+}
+
+.container .row {
+  padding: 65px;
+}
+
+.choix-carte img {
+  border-radius: 5px;
+}
+
+/*debut menu*/
+
+.menus {
+  text-align: center;
+  font-size: 1.2rem;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.308), rgba(0, 0, 0, 0.459)),
+    url("../img/pexels-photo-24553.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 120vh;
+  padding: 100px 0;
+  color: white;
+}
+
+.menus h2,
+.menus p {
+  text-transform: uppercase;
+}
+
+.menus-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin: 50px;
+}
+
+.menu-unité {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 40%;
+  min-width: 400px;
+}
+
+.menu-unité img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 4px solid white;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.menu-contenu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.menu-contenu h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.menu-contenu p {
+  text-transform: none;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.menu-contenu button {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+/*début reservation-------*/
+
+.reservation {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+
+.reservation p {
+  font-size: 1.5rem;
+}
+
+.reservation::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background-color: #333;
+  margin: 20px auto 0;
+}
+
+.elements {
+  display: flex;
+  justify-content: space-between;
+  gap: 120px;
+  max-width: 1000px;
+  align-items: flex-start;
+}
+
+#Réservation {
+  margin-left: 250px;
+  margin-right: 250px;
+  margin-bottom: 90px;
+}
+
+.element-formulaire {
+  flex: 2;
+  width: 60%;
+}
+
+.informations {
+  flex: 0.3;
+  text-align: left;
+  width: 30%;
+}
+
+.informations h3 {
+  font-size: 2rem;
+  margin-bottom: 2px;
+}
+
+.informations p {
+  margin: 10px;
+  font-size: 1.5rem;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: first baseline;
+  gap: 15px;
+}
+
+.form-group {
+  font-weight: bold;
+  text-align: left;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group input::placeholder {
+  color: #6c757d;
+  font-size: 1.2rem;
+}
+
+.form-group input {
+  padding: 12px 15px;
+  border: 1px solid #ced4da;
+  border-radius: 3px;
+}
+
+.btn {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.conditions {
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.champs-obligatoire {
+  font-weight: bold;
+  text-align: left;
+  font-size: medium;
+}
+
+.email-bleu {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/*footer*/
+
+.footer-site {
+  background-color: #3e2e1e;
+  color: white;
+  padding: 80px 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.reseaux-sociaux {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.reseaux-sociaux img {
+  width: 20px;
+  height: auto;
+  cursor: pointer;
+  filter: brightness(0) invert(1);
+}
+
+.copyright {
+  font-size: 1.6rem;
+}
+
+/*responsive*/
+
+/* format tablette (max 991px)*/
+@media screen and (min-width: 576px) and (max-width: 991px) {
+  .elements-cakes3000 {
+    margin: 0 20px;
+    justify-content: space-between;
+  }
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #212d39;
+    padding: 20px;
+    z-index: 1000;
+  }
+
+  nav.active {
+    display: block;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+  }
+
+  .elements-qui-sommes-nous {
+    margin: 0 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    gap: 15px;
+  }
+
+  .notre-carte {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .choix-carte {
+    width: 45%;
+  }
+  .choix-carte:last-child {
+    width: 100%;
+  }
+
+  .elements {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 0 5%;
+    max-width: 100%;
+  }
+  .element-formulaire {
+    width: 60%;
+  }
+  .informations {
+    width: 35%;
+  }
+  .form-group {
+    width: 45%;
+  }
+  #Réservation {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+/* format telephone (max 575px) */
+@media screen and (max-width: 575px) {
+  .elements-cakes3000 {
+    margin: 0 20px;
+    justify-content: space-between;
+  }
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #212d39;
+    padding: 20px;
+    z-index: 1000;
+  }
+
+  nav.active {
+    display: block;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+  }
+  .banner {
+    height: 50vh;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  .banner p {
+    font-size: 1.8rem;
+  }
+
+  .elements-qui-sommes-nous {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+  }
+
+  #quelques-chiffres {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .notre-carte {
+    flex-direction: column;
+    align-items: center;
+  }
+  .choix-carte {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  #Réservation {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+  }
+  .elements {
+    flex-direction: column;
+    padding: 0;
+  }
+  .element-formulaire,
+  .informations {
+    width: 100%;
+    flex: none;
+  }
+
+  .form-group {
+    width: 100%;
+  }
+
+  /* footer */
+  .footer-site {
+    flex-direction: column;
+    text-align: left;
+    gap: 20px;
+    padding: 40px 20px;
+  }
+  .reseaux-sociaux {
+    justify-content: left;
+  }
+}

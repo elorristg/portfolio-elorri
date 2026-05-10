@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Marvel univers</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">Marvel univers</div>
+      <nav class="menu">
+        <ul>
+          <li>
+            <a href="#section-personnages" class="bouton-personnages"
+              >Personnages</a
+            >
+          </li>
+          <li><a href="#section-cinema" class="bouton-cinema">Cinéma</a></li>
+          <li><a href="#section-contact" class="bouton-contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="background">
+      <h1>DECOUVREZ L'UNIVERS MARVEL !</h1>
+      <p>
+        Devenez incollable sur l'univers Marvel, ses personnages et ses films...
+      </p>
+    </div>
+
+    <div class="personnages" id="section-personnages">
+      <h2 class="title-h2">LES PERSONNAGES EMBLEMATIQUES</h2>
+      <figure>
+        <img src="img/iron-man.png" alt="iron-man" />
+        <figcaption>Iron man</figcaption>
+        <p>
+          Anthony "Tony" Stark, alias iron man, est un super-héros évoluant dans
+          l'univers Marvel.
+        </p>
+        <input type="submit" value="détail" />
+      </figure>
+
+      <figure>
+        <img src="img/spiderman.png" alt="spiderman" />
+        <figcaption>spiderman</figcaption>
+        <p>
+          Peter Parker, alias spider-man, est un super-héros évoluant dans
+          l'univers Marvel.
+        </p>
+        <input type="submit" value="détail" />
+      </figure>
+
+      <figure>
+        <img src="img/captain-america.png" alt="captain-america" />
+        <figcaption>Captain america</figcaption>
+        <p>
+          Captain america est un super-héros de bande dessinée évoluant dans
+          l'univers Marvel.
+        </p>
+        <input type="submit" value="détail" />
+      </figure>
+
+      <figure>
+        <img src="img/thor.png" alt="thor" />
+        <figcaption>Thor</figcaption>
+        <p>
+          Thor est une divinité et un super-héros de bande dessinée évoluant
+          dans l'univers Marvel.
+        </p>
+        <input type="submit" value="détail" />
+      </figure>
+    </div>
+
+    <div class="section-globale-cinema" id="section-cinema">
+      <video autoplay loop class="video-fond-unique">
+        <source src="vid/avengers.mp4" type="video/mp4" />
+      </video>
+
+      <div class="video-bande-annonce">
+        <h2>ADAPTATION AU CINEMA</h2>
+        <div class="conteneur-flex-trailers">
+          <figure>
+            <video src="vid/avengers.mp4" controls></video>
+            <div class="texte-video">
+              <h3>Iron man</h3>
+              <figcaption>
+                Thor est une divinité et un super-héros évoluant dans l'univers
+                Marvel.
+              </figcaption>
+            </div>
+          </figure>
+
+          <figure>
+            <video src="vid/avengers.mp4" controls></video>
+            <div class="texte-video">
+              <h3>Captain america</h3>
+              <figcaption>
+                Thor est une divinité et un super-héros évoluant dans l'univers
+                Marvel.
+              </figcaption>
+            </div>
+          </figure>
+        </div>
+      </div>
+
+      <div class="à-venir">
+        <div class="contenu-tableau">
+          <h2>A VENIR</h2>
+          <table border="1">
+            <thead>
+              <tr>
+                <th>Nom du film</th>
+                <th>Date de sortie</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Captain marvel</td>
+                <td>8 mars 2019</td>
+              </tr>
+              <tr>
+                <td>Avengers : infinity war part 2</td>
+                <td>3 mai 2019</td>
+              </tr>
+              <tr>
+                <td>Spiderman: far from home</td>
+                <td>5 juillet 2019</td>
+              </tr>
+              <tr>
+                <td>guardians of the galaxy vol.3</td>
+                <td>2020</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="contact-map-conteneur" id="section-contact">
+      <div class="contact-section">
+        <h2>CONTACTEZ-NOUS</h2>
+        <form method="get" action="traitement.php">
+          <label for="inputfirstname">Votre prénom :</label>
+          <input type="text" id="inputfirstname" name="prénom" />
+
+          <label for="inputemail">Votre email :</label>
+          <input type="email" id="inputemail" name="email" />
+
+          <label for="ObjetDemande">Objet de la demande :</label>
+          <select id="ObjetDemande" name="demande">
+            <option value="évènement" selected>évènement</option>
+            <option value="autres demandes">Autres demandes</option>
+          </select>
+
+          <label for="textareaMessage">Votre message :</label>
+          <textarea id="textareaMessage" name="message" rows="4"></textarea>
+
+          <input type="submit" value="Envoyer" class="bouton-envoyer" />
+        </form>
+      </div>
+
+      <div class="map-section">
+        <h2>STUDIOS MARVEL</h2>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3403.2268307010474!2d-118.3917406!3d34.1610427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c296060c5a1769%3A0x6734139f41df12e0!2sMarvel%20Studios!5e0!3m2!1sfr!2sfr!4v1700000000000"
+          width="100%"
+          height="400"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        >
+        </iframe>
+      </div>
+    </div>
+
+    <footer>
+      <p>Copyright 2018 ...</p>
+    </footer>
+  </body>
+</html>
