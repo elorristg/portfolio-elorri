@@ -1,0 +1,408 @@
+@font-face {
+  font-family: "abhaya-libre";
+  src: url("../fonts/abhaya-libre-bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "brown-sugar";
+  src: url("../fonts/brown-sugar.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "abhaya-libre-semi-bold";
+  src: url("../fonts/AbhayaLibre-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "abhaya-libre-regular";
+  src: url("../fonts/AbhayaLibre-Regular.ttf") format("truetype");
+}
+
+html {
+  font-size: 62, 5%;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fbf8f1;
+  margin: 0;
+}
+
+header {
+  font-family: brown-sugar;
+  color: #000;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  padding: 50px 20px;
+}
+header nav a {
+  text-decoration: none;
+  color: #000000;
+}
+header nav a:hover {
+  color: #d2c5b6;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+}
+
+.hero {
+  background-color: #d2c5b6;
+  height: calc(100vh - 110px);
+  min-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.profile-picture {
+  height: 75vh;
+  min-height: 400px;
+  max-height: 800px;
+  width: auto;
+  object-fit: contain;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  font-family: "abhaya-libre-regular", serif;
+  text-align: left;
+}
+
+.text-content h1 {
+  font-size: 5rem;
+  margin-bottom: 5px;
+}
+
+.text-content p {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 6rem;
+  font-family: brown-sugar;
+  padding: 50px 20px;
+}
+
+.about-me-h2 {
+  text-align: right;
+  margin-right: 150px;
+}
+
+.text-about-me p {
+  font-family: abhaya-libre-regular;
+  font-size: 1.6rem;
+  line-height: 45px;
+  text-align: justify;
+}
+
+.a-mon-sujet {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 50px;
+  padding: 10px 50px;
+}
+
+.picture-travel {
+  min-height: 400px;
+  height: 600px;
+  max-height: 800px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 15px;
+}
+
+.projects-title {
+  margin-left: 150px;
+}
+
+.container-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 100px;
+  max-width: 900px;
+  padding: 20px 50px;
+  margin-left: 300px;
+}
+
+.box {
+  background-color: #eaddd0;
+  border: 3px solid black;
+  border-radius: 25px;
+  width: 200px;
+  height: 130px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  font-size: 1.5rem;
+  color: black;
+  line-height: 1.7;
+  font-family: abhaya-libre;
+}
+
+.diplomes-title {
+  margin-left: 150px;
+}
+
+.diplomes-years {
+  margin-left: 250px;
+  font-family: abhaya-libre;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-family: abhaya-libre-regular;
+}
+.competences-title {
+  margin-left: 150px;
+}
+.competences-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-left: 150px;
+  padding-top: 20px;
+  max-width: 1200px;
+  font-family: "abhaya-libre-regular";
+}
+
+.competences-box {
+  font-family: "abhaya-libre", serif;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: calc(50% - 20px);
+
+  background-color: #ffffff;
+  padding: 30px 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.competences-box h3 {
+  font-size: 1.3rem;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.competences-box p {
+  font-size: 1.3rem;
+  font-family: "abhaya-libre-regular";
+}
+
+.experience-title {
+  margin-left: 150px;
+}
+
+.timeline-container {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* --- LE TRAIT VERTICAL CENTRAL --- */
+.timeline-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 40%; /* Place la ligne à 40% de la largeur de l'écran */
+  width: 6px;
+  background-color: #6d4c3d;
+  /*transform: translateX(-50%);*/
+  border-radius: 5px;
+}
+
+/* --- Une ligne (Date + Contenu) --- */
+.timeline-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.timeline-date {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 30px; /* Espace entre la boîte de date et le trait vertical */
+}
+
+.date-box {
+  background-color: #dbd0c4;
+  padding: 15px 30px;
+  border-radius: 20px;
+  font-family: "abhaya-libre", serif;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.timeline-content {
+  width: 60%;
+  padding-left: 40px;
+  position: relative;
+}
+
+.timeline-content::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 40px;
+  height: 6px;
+  background-color: #6d4c3d;
+  /*transform: translateY(-50%);*/
+  border-radius: 0 5px 5px 0;
+}
+
+.content-box {
+  background-color: #dbd0c4;
+  padding: 25px 30px;
+  border-radius: 20px;
+  text-align: center;
+  font-family: "abhaya-libre", serif;
+  line-height: 1.6;
+}
+
+.content-box h4 {
+  font-size: 1.3rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.content-box p {
+  margin: 5px 0;
+}
+
+.dashed-line {
+  border: none;
+  border-top: 2px dashed #333;
+  width: 50%;
+  margin: 15px auto;
+}
+
+.contact-title {
+  margin-left: 150px;
+}
+
+/* --- La grande zone de contact --- */
+.contact-section {
+  background-color: #0b1e36; /* Fond noir */
+  color: #ffffff; /* Texte blanc */
+  padding: 80px 150px; /* On garde ton alignement avec le reste du site */
+  position: relative; /* Indispensable pour pouvoir placer le logo LinkedIn librement ensuite */
+  margin-top: 50px;
+}
+
+/* --- Le Titre --- */
+.contact-title {
+  font-family: "abhaya-libre", serif;
+  font-size: 4.5rem;
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+/* --- Les infos de contact (Email, Téléphone) --- */
+.info-block {
+  margin-bottom: 35px;
+  font-family: sans-serif;
+}
+
+.info-block h3 {
+  font-size: 1.5rem;
+  text-decoration: underline;
+  font-family: "abhaya-libre", serif;
+  font-weight: normal;
+  margin-bottom: 8px;
+}
+
+.info-block p,
+.info-block a {
+  font-size: 1.4rem;
+  font-family: "abhaya-libre", serif;
+  color: #ffffff;
+  text-decoration: none; /* Enlève le soulignement du lien email */
+  margin: 0;
+}
+
+/* --- LA BOÎTE "VOTRE MESSAGE" --- */
+.message-box {
+  width: 600px; /* Largeur de la boîte blanche */
+  height: 250px; /* Hauteur de la boîte blanche */
+  background-color: #ffffff;
+  color: #000000; /* Le texte que l'utilisateur va taper sera noir */
+
+  border: none; /* Enlève la bordure par défaut */
+  border-radius: 8px; /* Bords légèrement arrondis */
+  padding: 20px; /* Espace à l'intérieur de la boîte */
+
+  font-family: sans-serif;
+  font-size: 1.2rem;
+
+  resize: none; /* Empêche l'utilisateur d'agrandir ou rétrécir la boîte avec sa souris */
+  margin-top: 30px;
+}
+
+/* On force le texte par défaut "Votre message :" à être bien noir (et pas gris clair) */
+.message-box::placeholder {
+  color: #716d6d;
+  opacity: 1;
+}
+
+/* --- SECTION RÉSEAUX SOCIAUX (Logo LinkedIn) --- */
+
+/* Conteneur du logo : pour le centrer et aérer le bas de page */
+.social-link {
+  display: flex;
+  justify-content: right; /* Centre le logo horizontalement */
+  margin-top: 40px; /* Crée de l'espace au-dessus du logo */
+  padding-bottom: 40px; /* Crée de l'espace tout en bas de la page */
+}
+
+/* L'image du logo LinkedIn elle-même */
+.social-link img {
+  width: 50px; /* C'est ici que tu peux modifier la taille du logo (essaie 40px ou 60px selon tes goûts) */
+  height: auto; /* Permet de ne pas déformer l'image */
+  transition: transform 0.3s ease; /* Prépare une petite animation fluide pour le survol */
+}
+
+/* Effet au survol de la souris */
+.social-link img:hover {
+  transform: scale(
+    1.15
+  ); /* Fait légèrement grossir le logo quand la souris passe dessus */
+  cursor: pointer;
+}
