@@ -150,9 +150,9 @@ h2 {
 }
 
 .container-box a.box {
-  text-decoration: none; /* Enlève le soulignage */
-  color: inherit; /* Garde la couleur de texte initiale */
-  display: flex; /* On remet le flex pour que le texte soit centré comme avant */
+  text-decoration: none;
+  color: inherit;
+  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -215,6 +215,11 @@ h2 {
   padding: 30px 20px;
   border-radius: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.competences-box:hover {
+  transform: scale(1.06);
 }
 
 .competences-box h3 {
@@ -330,24 +335,24 @@ h2 {
 .contact-section {
   background-color: #0b1e36; /* Fond noir */
   color: #ffffff; /* Texte blanc */
-  padding: 80px 150px; /* On garde ton alignement avec le reste du site */
   position: relative; /* Indispensable pour pouvoir placer le logo LinkedIn librement ensuite */
   margin-top: 50px;
 }
 
 /* --- Le Titre --- */
-.contact-title {
-  font-family: "abhaya-libre", serif;
+.contact-title h2 {
+  font-family: "brown-sugar", serif;
   font-size: 4.5rem;
+  margin-left: 150px;
   font-weight: normal;
-  margin-top: 0;
-  margin-bottom: 50px;
 }
 
 /* --- Les infos de contact (Email, Téléphone) --- */
 .info-block {
   margin-bottom: 35px;
   font-family: sans-serif;
+  padding: 10px 150px; /* On garde ton alignement avec le reste du site */
+  display: flex;
 }
 
 .info-block h3 {
@@ -368,27 +373,122 @@ h2 {
 }
 
 /* --- LA BOÎTE "VOTRE MESSAGE" --- */
+/* Fond de la section */
+.contact-section {
+  background-color: #0d1b2a; /* Ton bleu nuit */
+  color: white;
+  padding: 60px 10%;
+  font-family: Arial, sans-serif;
+}
+
+.contact-title {
+  font-family: "brown-sugar", sans-serif; /* Ta police de titre */
+  font-size: 4.5rem;
+  margin-bottom: 30px;
+  margin-left: 150px;
+}
+
+/* Alignement Mail et Tel */
+.contact-info {
+  display: flex;
+  flex-direction: row; /* On empile la ligne Email et la ligne Tel */
+  align-items: center; /* On centre horizontalement tout le bloc */
+  justify-content: center;
+  gap: 350px; /* Espace entre la ligne Email et la ligne Tel */
+  margin-left: 0; /* ATTENTION : on enlève le 150px pour que le centrage soit réel */
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.info-block {
+  display: flex;
+  flex-direction: column; /* Titre au dessus de l'adresse */
+  align-items: flex-start;
+  padding: 0; /* ON SUPPRIME LE 150px QUI CASSAIT TOUT */
+}
+
+.info-block h3 {
+  font-family: "abhaya-libre-regular", sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+
+.info-block p,
+.info-block a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+/* Mise en page du formulaire */
+.form-wrapper {
+  display: flex;
+  gap: 30px; /* Espace entre les deux colonnes */
+}
+
+.form-left,
+.form-right {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 20px; /* Espace entre les champs */
+}
+
+/* Style des champs */
+.input-field,
 .message-box {
-  width: 600px; /* Largeur de la boîte blanche */
-  height: 250px; /* Hauteur de la boîte blanche */
-  background-color: #ffffff;
-  color: #000000; /* Le texte que l'utilisateur va taper sera noir */
+  width: 100%;
+  padding: 15px;
+  font-family: "abhaya-libre-regular";
+  border-radius: 10px;
+  border: none;
+  font-size: 1.1rem;
+  box-sizing: border-box;
+}
 
-  border: none; /* Enlève la bordure par défaut */
-  border-radius: 8px; /* Bords légèrement arrondis */
-  padding: 20px; /* Espace à l'intérieur de la boîte */
+/* Le textarea s'étire pour remplir la colonne droite */
+.form-right .message-box {
+  flex-grow: 1;
+  min-height: 120px;
+  resize: none;
+  font-family: "abhaya-libre-regular";
+}
 
-  font-family: sans-serif;
-  font-size: 1.2rem;
-
-  resize: none; /* Empêche l'utilisateur d'agrandir ou rétrécir la boîte avec sa souris */
+/* Footer du formulaire (Bouton et LinkedIn) */
+.form-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   margin-top: 30px;
 }
 
-/* On force le texte par défaut "Votre message :" à être bien noir (et pas gris clair) */
-.message-box::placeholder {
-  color: #716d6d;
-  opacity: 1;
+.submit-button {
+  background-color: #fdfdf5; /* Crème */
+  color: #0d1b2a;
+  border: none;
+  padding: 12px 60px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #e0e0d5;
+}
+
+.social-link {
+  position: absolute;
+  right: 0;
+}
+
+.social-link img {
+  width: 35px;
+  border-radius: 5px;
 }
 
 /* --- SECTION RÉSEAUX SOCIAUX (Logo LinkedIn) --- */
@@ -403,9 +503,9 @@ h2 {
 
 /* L'image du logo LinkedIn elle-même */
 .social-link img {
-  width: 50px; /* C'est ici que tu peux modifier la taille du logo (essaie 40px ou 60px selon tes goûts) */
-  height: auto; /* Permet de ne pas déformer l'image */
-  transition: transform 0.3s ease; /* Prépare une petite animation fluide pour le survol */
+  width: 30px;
+  height: auto;
+  transition: transform 0.3s ease;
 }
 
 /* Effet au survol de la souris */
@@ -414,4 +514,21 @@ h2 {
     1.15
   ); /* Fait légèrement grossir le logo quand la souris passe dessus */
   cursor: pointer;
+}
+
+/* responsive*/
+
+/* Mobile : tout mettre sur une seule colonne */
+@media (max-width: 768px) {
+  .form-wrapper {
+    flex-direction: column;
+  }
+  .form-left,
+  .form-right {
+    width: 100%;
+  }
+  .contact-info {
+    gap: 30px;
+    flex-direction: column;
+  }
 }
