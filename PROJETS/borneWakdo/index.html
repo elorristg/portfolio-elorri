@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Borne de commande interactive pour les restaurants Wacdo. Composez votre menu et passez commande facilement."
+    />
+    <title>Borne Wacdo</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <main>
+      <section id="screen-welcome" class="screen active">
+        <div class="kiosk-modal-wrapper">
+          <div class="kiosk-modal-content-start">
+            <h1>Bonjour,</h1>
+            <p>
+              Souhaitez-vous consommer votre menu sur place ou préférez-vous
+              l'emporter ?
+            </p>
+            <div class="choices-container">
+              <button class="choice-card sur-place">
+                <span class="label">Sur Place</span>
+              </button>
+              <button class="choice-card a-emporter">
+                <span class="label">A Emporter</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="screen-choose-menus" class="screen">
+        <div class="left-content">
+          <button
+            id="hamburger-menu"
+            class="hamburger-menu"
+            aria-label="Ouvrir le menu"
+          >
+            ☰
+          </button>
+
+          <div class="select-food">
+            <div class="arrow-left" id="arrow-left-arrow">
+              <img src="./img/images/fleche-slider.png" alt="Précédent" />
+            </div>
+            <div id="categories-container"></div>
+            <div class="arrow-right" id="arrow-right-arrow">
+              <img src="./img/images/fleche-slider.png" alt="Suivant" />
+            </div>
+          </div>
+
+          <div class="selection-menus">
+            <div class="text">
+              <h2 id="category-title">Nos menus</h2>
+              <p id="category-desc">Sélectionnez le produit de votre choix</p>
+            </div>
+            <div id="products-container"></div>
+          </div>
+        </div>
+
+        <aside class="sidebar">
+          <div class="sidebar-header">
+            <img src="./img/images/logo.png" alt="Logo" class="logo" />
+            <div class="order-meta">
+              <div class="order-info">
+                <p class="order-title">Commande numéro</p>
+                <p class="order-type" id="order-type-display">
+                  Sur place : 326
+                </p>
+              </div>
+              <div class="order-number">72</div>
+            </div>
+          </div>
+          <hr class="divider" />
+          <div class="order-items" id="cart-items"></div>
+          <div class="sidebar-footer">
+            <hr class="divider" />
+            <div class="total-row">
+              <div class="total-label">
+                <p>TOTAL</p>
+                <p>(ttc)</p>
+              </div>
+              <div class="total-price" id="cart-total">0,00€</div>
+            </div>
+            <div class="action-buttons">
+              <button class="btn-abandon">Abandon</button>
+              <button class="btn-payer">Payer</button>
+            </div>
+          </div>
+        </aside>
+
+        <div class="modal-overlay" id="modal-taille-menu">
+          <div class="modal">
+            <div class="modal-header">
+              <button class="btn-close close-modal-btn"><span>X</span></button>
+            </div>
+            <div class="modal-body">
+              <h2 class="hungry">Une grosse faim ?</h2>
+              <p>
+                Le menu maxi Best Of comprend un sandwich, une grande frite et
+                une boisson 50 Cl
+              </p>
+              <div class="options-container size-options">
+                <div
+                  class="option-card"
+                  data-size="Best Of"
+                  data-price-modifier="0"
+                >
+                  <img
+                    src="./img/images/illustration-best-of.png"
+                    alt="Best Of"
+                  />
+                  <p class="size-title">Menu Best Of</p>
+                </div>
+                <div
+                  class="option-card"
+                  data-size="Maxi Best Of"
+                  data-price-modifier="0.50"
+                >
+                  <img
+                    src="./img/images/illustration-maxi-best-of.png"
+                    alt="Maxi Best Of"
+                    class="large-img"
+                  />
+                  <p class="size-title">Menu Maxi Best Of</p>
+                </div>
+              </div>
+              <button class="btn-etape-suivante" id="btn-taille-suivant">
+                Etape Suivante
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-overlay" id="modal-accompagnement">
+          <div class="modal">
+            <div class="modal-header">
+              <button class="btn-retour" id="btn-retour-accomp">Retour</button>
+              <button class="btn-close close-modal-btn"><span>X</span></button>
+            </div>
+            <div class="modal-body">
+              <h2>Choisissez votre accompagnement</h2>
+              <p>Frites, potatoes, la pomme de terre dans tous ses états</p>
+              <div class="options-container">
+                <div class="option-card" data-choice="Frites">
+                  <img src="./img/frites/GRANDE_FRITE.png" alt="Frites" />
+                  <p>Frites</p>
+                </div>
+                <div class="option-card" data-choice="Potatoes">
+                  <img src="./img/frites/GRANDE_POTATOES.png" alt="Potatoes" />
+                  <p>Potatoes</p>
+                </div>
+              </div>
+              <button class="btn-etape-suivante" id="btn-next-step">
+                Etape Suivante
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-overlay" id="modal-boisson">
+          <div class="modal">
+            <div class="modal-header">
+              <button class="btn-retour" id="btn-retour-boisson">Retour</button>
+              <button class="btn-close close-modal-btn"><span>X</span></button>
+            </div>
+            <div class="modal-body">
+              <h2>Choisissez votre boisson</h2>
+              <p>
+                Un soda, un jus de fruit ou un verre d'eau pour accompagner
+                votre repas
+              </p>
+
+              <div class="drinks-slider-wrapper" id="drinks-wrapper">
+                <div class="arrow-left" id="arrow-left-boisson">
+                  <img src="./img/images/fleche-slider.png" alt="Précédent" />
+                </div>
+
+                <div
+                  class="options-container drinks-options"
+                  id="drinks-container"
+                ></div>
+
+                <div class="arrow-right" id="arrow-right-boisson">
+                  <img src="./img/images/fleche-slider.png" alt="Suivant" />
+                </div>
+              </div>
+
+              <button class="btn-etape-suivante" id="btn-ajouter-commande">
+                Ajouter le menu à ma commande
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-overlay" id="modal-custom-drink">
+          <div class="modal">
+            <div class="modal-header">
+              <button class="btn-close" id="btn-close-custom-drink">
+                <span>X</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h2>Une petite soif ?</h2>
+              <p>
+                Choisissez la taille de votre boisson, +0.50€ pour le format 50
+                CL
+              </p>
+              <div class="options-container drink-size-options">
+                <div
+                  class="option-card"
+                  data-drink-size="30cl"
+                  data-price-modifier="0"
+                >
+                  <img
+                    src="./img/boissons/coca-cola.png"
+                    alt="boisson-coca-cola-30cl"
+                    class="small-img"
+                  />
+                  <p class="size-title">30 cl</p>
+                </div>
+                <div
+                  class="option-card"
+                  data-drink-size="50cl"
+                  data-price-modifier="0.50"
+                >
+                  <img
+                    src="./img/boissons/coca-cola.png"
+                    alt="boisson-coca-cola-50cl"
+                    class="large-img"
+                  />
+                  <p class="size-title">50 cl</p>
+                </div>
+              </div>
+              <div class="quantity-selector-container">
+                <div class="quantity-controls">
+                  <button class="btn-qty" id="btn-qty-minus">-</button>
+                  <span id="drink-quantity-value">1</span>
+                  <button class="btn-qty" id="btn-qty-plus">+</button>
+                </div>
+              </div>
+              <div class="drinks-buttons">
+                <button class="btn-retour" id="btn-cancel-drink">
+                  Annuler
+                </button>
+                <button class="btn-etape-suivante" id="btn-confirm-add-drink">
+                  Ajouter à ma commande
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-overlay" id="modal-produit-seul">
+          <div class="modal">
+            <div class="modal-header">
+              <button class="btn-close close-modal-btn"><span>X</span></button>
+            </div>
+            <div class="modal-body">
+              <h2 id="nom-produit-quantite">Nom du produit</h2>
+              <p>Choisissez la quantité</p>
+
+              <div class="quantity-controls">
+                <button id="btn-qty-minus-seul" class="btn-qty">-</button>
+                <span id="produit-seul-quantity-value">1</span>
+                <button id="btn-qty-plus-seul" class="btn-qty">+</button>
+              </div>
+
+              <button class="btn-etape-suivante" id="btn-confirm-add-seul">
+                Ajouter à ma commande
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="number-order" class="screen">
+        <div class="order-save">
+          <img src="./img/images/chevalet-110.png" alt="Chevalet" />
+          <div class="number">
+            <h2>Pour être servi à table,</h2>
+            <p>Récuperez un chevalet et indiquez ici le numéro</p>
+            <div class="digit-container">
+              <input
+                type="number"
+                class="digit"
+                maxlength="1"
+                aria-label="Premier chiffre du chevalet"
+              />
+              <input
+                type="number"
+                class="digit"
+                maxlength="1"
+                aria-label="Deuxième chiffre du chevalet"
+              />
+              <input
+                type="number"
+                class="digit"
+                maxlength="1"
+                aria-label="Troisième chiffre du chevalet"
+              />
+            </div>
+          </div>
+          <button class="btn-save-number">Enregistrer le numéro</button>
+        </div>
+      </section>
+
+      <section id="screen-thanks" class="screen">
+        <div class="kiosk-modal-wrapper">
+          <div class="kiosk-modal-content">
+            <h1>Toute l'équipe vous remercie,</h1>
+            <p>Et vous souhaite un bon appétit dans nos restaurants,</p>
+            <p class="bye">à bientôt !</p>
+          </div>
+        </div>
+        <button id="btn-nouvelle-commande" class="btn-etape-suivante">
+          Nouvelle commande
+        </button>
+      </section>
+    </main>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
