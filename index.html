@@ -79,6 +79,9 @@
           <a href="PROJETS/cakes3000/index.html" target="_blank" class="box"
             >CAKES 3000<br
           /></a>
+          <a href="PROJETS/borneWakdo/index.html" target="_blank" class="box"
+            >BORNE<br />MACDO</a
+          >
         </div>
       </div>
       <h2 id="diplomes" class="diplomes-title">Diplômes</h2>
@@ -215,8 +218,8 @@
           </div>
         </div>
       </div>
-      <section class="contact-section">
-        <h2 id="contact" class="contact-title">CONTACT</h2>
+      <section class="contact-section" id="contact">
+        <h2 class="contact-title">CONTACT</h2>
 
         <div class="contact-info">
           <div class="info-block">
@@ -236,21 +239,55 @@
 
         <div class="message-container">
           <form action="#">
-            <textarea
-              class="message-box"
-              placeholder="Votre message :"
-            ></textarea>
-          </form>
-        </div>
+            <div class="form-wrapper">
+              <div class="form-left">
+                <input
+                  type="text"
+                  class="input-field"
+                  placeholder="Nom et prénom"
+                  required
+                />
+                <input
+                  type="email"
+                  class="input-field"
+                  placeholder="Mail"
+                  required
+                />
+              </div>
 
-        <div class="social-link">
-          <a
-            href="https://www.linkedin.com/in/elorri-saint-gerard-808b48211/"
-            target="_blank"
-            ><img
-              src="img/linkedin-bouton-social-populaire-d-icône-de-médias-sur-le-fond-blanc-isolement-transparent-154683363.webp"
-              alt="LinkedIn"
-          /></a>
+              <div class="form-right">
+                <input
+                  type="text"
+                  class="input-field"
+                  placeholder="Objet"
+                  required
+                />
+                <textarea
+                  class="message-box"
+                  placeholder="Votre message :"
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="form-footer">
+              <button type="submit" class="submit-button">Envoyer</button>
+
+              <div class="social-link">
+                <a
+                  href="www.linkedin.com/in/elorri-saint-gerard-808b48211
+
+"
+                  target="_blank"
+                  class="logo-linkedin"
+                >
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+                    alt="Mon profil LinkedIn"
+                  />
+                </a>
+              </div>
+            </div>
+          </form>
         </div>
       </section>
     </main>
